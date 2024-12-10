@@ -1,0 +1,17 @@
+{
+    "tasks": {
+        "wasmbuild": "deno run -A jsr:@deno/wasmbuild@0.17.3",
+        "clean": "cd rs_lib && cargo clean",
+        "fmt": "deno fmt && cd rs_lib && cargo fmt",
+        "test": "deno test --allow-all main_test.ts && cd rs_lib && cargo test",
+        "build": "deno task fmt && deno task wasmbuild && deno task clean"
+    },
+    "imports": {
+        "@std/assert": "jsr:@std/assert@1"
+    },
+    "fmt": {
+        "lineWidth": 150,
+        "indentWidth": 4,
+        "exclude": ["rs_lib/**", "target/**"]
+    }
+}
