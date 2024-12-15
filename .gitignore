@@ -1,4 +1,1 @@
-/target
-/lib
-Cargo.lock
 deno.lock
