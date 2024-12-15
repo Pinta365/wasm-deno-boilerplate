@@ -1,7 +1,7 @@
-import { ensureDir } from "jsr:@std/fs";
-import * as path from "jsr:@std/path";
-import { parseArgs } from "jsr:@std/cli/parse-args";
-import { bold, cyan, green, red, yellow } from "jsr:@std/fmt/colors";
+import { ensureDir } from "@std/fs";
+import * as path from "@std/path";
+import { parseArgs } from "@std/cli/parse-args";
+import { bold, cyan, green, red, yellow } from "@std/fmt/colors";
 
 const parsedArgs = parseArgs(Deno.args, {
     string: ["name", "lang"],
